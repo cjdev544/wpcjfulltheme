@@ -1,0 +1,48 @@
+.wpcf7-form {
+    font-weight: 700;
+}
+
+.wpcf7-form-control {
+    width: 100%;
+    padding: 1rem;
+    height: 4rem;
+    border: 1px solid var(--text-light);
+}
+
+.wpcf7-textarea {height: 20rem;}
+
+.wpcf7-submit {
+    background-color: var(--first-color);
+    font-size: 2rem;
+    font-family: var(--text-font);
+    padding: 1.2rem;
+    height: auto;
+    color: var(--white);
+    border: 1px solid var(--white);
+    transition: all .3s ease;
+
+    &:hover {
+        cursor: pointer;
+        background-color: var(--white);
+        color: var(--first-color);
+        border: 1px solid var(--first-color);
+    }
+}
+
+span.wpcf7-not-valid-tip,
+div.wpcf7-mail-sent-ng, div.wpcf7-aborted {
+    background-color: red;
+    color: var(--white);
+    padding-left: 1rem;
+}
+
+div.wpcf7-validation-errors, div.wpcf7-acceptance-missing {
+    background-color: #f7e700;
+    text-align: center;
+}
+
+.div.wpcf7 .ajax-loade {
+    display: block;
+    text-align: center;
+    margin: 2rem auto 0 auto;
+}

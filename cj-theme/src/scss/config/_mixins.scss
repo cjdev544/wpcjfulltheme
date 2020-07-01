@@ -1,0 +1,13 @@
+// Mixin typography
+@mixin font($size) {
+    font-size: nth($list: map-get($map: $fonts, $key: $size), $n: 1);
+    line-height: nth($list: map-get($map: $fonts, $key: $size), $n: 2);
+}
+
+
+// Breackpoints
+@mixin from($breackpoint) {
+    @media screen and (min-width: map-get($map: $breackpoints, $key: $breackpoint)) {
+        @content;
+    }
+}

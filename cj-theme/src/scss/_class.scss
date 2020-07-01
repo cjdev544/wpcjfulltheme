@@ -1,0 +1,101 @@
+.ClassList {
+    max-width: var(--container-width);
+    width    : 95%;
+    margin   : 0 auto;
+
+    & ul {
+        margin-top: 4rem;
+
+        @include from(medium) {
+            display        : flex;
+            flex-wrap      : wrap;
+            justify-content: space-between;
+        }
+    }
+}
+
+.Card {
+    margin-bottom   : 4rem;
+    background-color: var(--text-light);
+    border-radius   : 10px;
+    overflow        : hidden;
+    box-shadow      : 1px 1px 5px 0px #000;
+
+
+    & img {
+        display: block;
+    }
+
+    @include from(medium) {
+        flex    : 0 0 calc(50% - 2rem);
+        position: relative;
+    }
+}
+
+.ClassContent {
+    padding    : 3rem 1rem;
+    padding-top: 1rem;
+    z-index: 2;
+
+    & h3 {
+        @include font(title3);
+        line-height: 1;
+        margin     : 1rem;
+    }
+
+    & p {
+        font-weight: 700;
+        font-size  : 2rem;
+        margin     : 0;
+    }
+
+    @include from(medium) {
+        position  : absolute;
+        bottom    : 0;
+        left      : 0;
+        text-align: left;
+
+        & h3 {
+            color: var(--white);
+        }
+
+        & p {
+            color: var(--first-color);
+        }
+    }
+}
+
+.Gradient::after {
+    @include from(medium) {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+
+        /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#000000+0,000000+100&0+34,0.65+77 */
+        background: -moz-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 34%, rgba(0, 0, 0, 0.65) 77%, rgba(0, 0, 0, 0.65) 100%);
+        /* FF3.6-15 */
+        background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 34%, rgba(0, 0, 0, 0.65) 77%, rgba(0, 0, 0, 0.65) 100%);
+        /* Chrome10-25,Safari5.1-6 */
+        background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 34%, rgba(0, 0, 0, 0.65) 77%, rgba(0, 0, 0, 0.65) 100%);
+        /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        filter    : progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#a6000000', GradientType=0);
+        /* IE6-9 */
+
+    }
+}
+
+// SingleClass
+.SingleClass {
+    & h1 {margin-bottom: 2rem;}
+
+    & .SingleHour {
+        text-align: center;
+        font-weight: 700;
+        font-size  : 2rem;
+        margin     : 0;
+    }
+}

@@ -1,0 +1,16 @@
+.Author {
+    text-align: center;
+    
+    & h3 {color: var(--first-color);}
+
+    & i {
+        color: var(--first-color);
+        font-size: 2rem;
+        margin-right: 1rem;
+    }
+
+    & p {
+        display: inline-block;
+        margin: 0;
+    }
+}

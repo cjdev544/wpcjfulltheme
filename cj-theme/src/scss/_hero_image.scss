@@ -1,0 +1,38 @@
+
+
+body.home .Header {
+    height: 100vh;
+    min-height: 50rem;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+
+    & .Header-container {height: 100%;}
+}
+
+.HeroMeta {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @include from(medium) {
+        padding-top: var(--header-height);
+    }
+}
+
+.HeroInfo {
+    color: var(--white);
+    max-width: 80%;
+    text-align: center;
+
+    & h1 {margin-bottom: 0;}
+
+    & p {
+        font-size: 2rem;
+        line-height: 3rem;
+    }
+}

@@ -1,0 +1,141 @@
+/* ********** Header & Panel Navigation ********** */
+.Header {
+    // position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    width: 100%;
+    height: var(--header-height);
+    line-height: var(--header-height);
+    background-color: var(--second-color);
+
+    &-container {
+        position: relative;
+        margin: 0 auto;
+        max-width: var(--container-width);
+        width: 95%;
+        z-index: 10000;
+    } 
+}
+
+body.home .Header .Header-container.MenuFixed,
+.Header .MenuFixed {
+    position: fixed;
+    height: 80px;
+    width: 100%;
+    background-color: var(--text-dark);
+    transition: all .3s ease;
+
+    @include from(large) {
+        min-width: 100%;
+
+        ul {
+            margin-top: -23px;
+            margin-right: 2rem;
+        }
+    }
+ 
+    .Logo img {
+        margin: 0;
+        padding: 0;
+        height: 60px;
+
+        @include from(large) {
+            margin-left: 2rem;
+        }
+    }
+
+    & .Panel-btn {top: -3.5rem;}
+}
+
+.Logo {
+    position: absolute;
+    z-index: 999;
+
+    & a {
+        @include font(title2);
+        font-weight: $semibold;
+        text-decoration: none;
+        color: var(--main-color);
+        transition: all .3s ease;
+
+        &:hover {opacity: .75;}
+    }
+
+    & img {
+        padding: 2rem;
+        width: auto;
+        height: var(--header-height);
+    }
+}
+
+.Panel {
+    position: fixed;
+    z-index: 998;
+    padding-top: 2.5rem;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    overflow-y: auto;
+    background-color: var(--second-modal-color);
+    transition: transform .3s ease;
+    /* De arriba */
+    transform: translate(0, -100%);
+    /* De la izquierda */
+    transform: translate(-100%, 0);
+    /* De abajo */
+    transform: translate(0, 100%);
+    /* De la derecha */
+    transform: translate(100%, 0);
+
+    &.is-active {transform: translate(0, 0);}
+
+    &-btn {
+        position: absolute;
+        z-index: 999;
+        top: -.5rem;
+        right: 0;
+    }
+}
+
+.hamburger {
+    &:focus {
+        outline: 0;
+        border: 0;
+    }
+
+    &-inner,
+    &-inner:after,
+    &-inner:before {background-color: var(--text-light);}
+}
+
+.hamburger.is-active .hamburger-inner, .hamburger.is-active .hamburger-inner:after, .hamburger.is-active .hamburger-inner:before {background-color: var(--text-light);}
+
+/* ********** Desktop ********** */
+@include from(large) {
+    .Header-container {display: flex;}
+
+    .Logo {
+        position: static;
+        width: 30%;
+    }
+
+    .Panel {
+        position: static;
+        width: 70%;
+        display: flex;
+        overflow-y: visible;
+        background-color: transparent;
+        transform: translate(0, 0);
+
+        &-btn {display: none;}
+    }
+}
+
+.Widget,
+.widget h3 {
+    background-color: black;
+    color: red;
+}

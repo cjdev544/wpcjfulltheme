@@ -1,0 +1,32 @@
+/* ********** Custom Properties ********** */
+:root {
+    --first-font: 'Staatliches', cursive;
+    --text-font: 'Open Sans', sans-serif;
+    --second-font: 'Raleway', sans-serif;
+    --font-size: 20px;
+    --line-height: 30px;
+
+    --first-color: rgb(255, 91, 0);
+    --main-modal-color: rgba(255, 91, 0, .75);
+    --second-color: rgb(47, 46, 46);
+    --second-modal-color: rgba(47, 46, 46, .75);
+    --menu-items: #ececec;
+
+    --bg-color: #fff;
+    --bg-modal-color: rgba(0, 0, 0, .5);
+    --bg-alternate-color: #F3F3F3;
+    --border-color: #DDD;
+
+    --text-dark: #2F2E2E;
+    --text-light: #EBEBEB;
+    --white: #FFF;
+    --Black: #000;
+    --title-color: var(--second-color);
+
+    --link-color: var(--main-color);
+    --link-hover-color: var(--second-color);
+
+    --container-width: 1200px;
+    --full-width: 900px;
+    --header-height: 12rem;
+}

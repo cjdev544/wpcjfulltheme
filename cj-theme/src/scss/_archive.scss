@@ -1,0 +1,32 @@
+.TermsResults {
+    text-align: center;
+
+    & mark {
+        font-family: var(--first-font);
+        @include font(title3);
+        padding: .5rem 1.5rem;
+        background-color: var(--first-color);
+        text-transform: uppercase;
+        color: var(--text-light);
+    }
+}
+
+.PostCard { 
+    margin-top: 8rem;
+
+    & h2 {margin: 0;}
+
+    border-bottom: 2px dashed var(--text-dark);
+
+    & i {
+        color: var(--first-color);
+        font-size: 2rem;
+        margin-right: 1rem;
+    }
+
+    & a {
+        transition: all .3s ease;
+
+        &:hover {color: var(--text-dark);}
+    }
+}

@@ -1,0 +1,98 @@
+.Footer-container {
+    max-width: var(--container-width);
+    width: 95%;
+    margin: 0 auto;
+    border-top: 1px solid var(--second-color);
+    padding-top: 2rem;
+
+    & .Menu {
+        width: 50%;
+        margin: 0;
+    }
+
+    & a {
+        @include font(base);
+        color: var(--text-dark);
+    }
+
+    & .Menu a::after {margin-top: 0;}
+}
+
+.Menu-footer {
+    color: var(--text-dark);
+    text-align: left;
+    padding-top: 0;
+    & a {padding: 1rem 0;}
+
+    & .current_page_item a {color: var(--first-color);}
+
+    @include from(medium) {
+        padding-top: 0;
+
+        & ul {
+            flex-direction : row;
+            width: 80%;
+            justify-content: space-between;
+        }
+    }
+
+    @include from(large) {
+        & .current_page_item a {color: var(--text-dark);}
+    }
+}
+
+.FooterMenu {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.SocialMedia ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    & .sr-text {display: none;}
+
+    & a {
+        padding-left: 4rem;
+        font-size: 3rem;
+        color: var(--first-color);
+        transition: all .3s ease;
+
+        &::before {
+            content: '\f19a';
+            display: inline-block;
+            font-family: 'Font Awesome 5 Brands';
+        }
+
+        &[href*="facebook"]::before {content: '\f09a';}
+
+        &[href*="twitter"]::before {content: '\f099';}
+
+        &[href*="instagram"]::before {content: '\f16d';}
+
+        &[href*="youtube"]::before {content: '\f167';}
+    }
+
+    & a:hover {color: var(--text-dark);}
+
+    @include from(medium) {
+        & a {font-size: 4rem;}
+    }
+}
+
+.Copy {
+    @include font(smaller);
+    text-align: right;
+
+    & a {
+        @include font(base);
+        color: var(--first-color);
+        transition: all .3s ease;
+    }
+
+    & a:hover {color: var(--text-dark);}
+}
+

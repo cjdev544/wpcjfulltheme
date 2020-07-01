@@ -1,0 +1,17 @@
+.PostContent {
+    max-width: var(--container-width);
+    width: 95%;
+    margin: 0 auto;
+
+    & h1 {
+        text-align: center;
+        color: var(--first-color);
+    }
+}
+
+.PageImg {
+    margin: 0 auto;
+    margin-bottom: 3rem;
+}
+
+.FullWidth {max-width: var(--full-width);}

@@ -1,0 +1,14 @@
+.PostContent {
+
+    & i {
+        color: var(--first-color);
+        font-size: 2rem;
+        margin-right: 1rem;
+    }
+
+    & a {
+        transition: all .3s ease;
+
+        &:hover {color: var(--text-dark);}
+    }
+}
